@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certa Resposta?</title>
+    <style>
+        body {
+            background-color: rgb(255, 242, 0); /* Cor de fundo do corpo */
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            flex-direction: column;
+            justify-content: center; /* Centraliza verticalmente */
+            align-items: center; /* Centraliza horizontalmente */
+            position: relative;
+        }
+
+        .retangulo {
+            width: 100vw;  /* Largura total da janela */
+            height: 100px; /* Altura do retângulo */
+            background-color: #b4b4b4; /* Cor do retângulo */
+            border: 2px solid rgb(161, 161, 161); /* Borda do retângulo */
+            position: absolute;
+            top: 0; /* Posiciona no topo da página */
+            left: 0;
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente o conteúdo */
+            align-items: center; /* Centraliza verticalmente o conteúdo */
+        }
+
+        h1 {
+            font-size: 60px; /* Tamanho da letra */
+            font-family: Georgia, 'Times New Roman', Times, serif; /* Tipo de fonte */
+            color: rgb(0, 0, 0); /* Cor da letra */
+            margin: 0;
+        }
+
+        .imagem-centralizada {
+      
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            height: calc(120vh - 100px); /* Altura total da janela menos o tamanho do retângulo */
+            margin-left: 12%; /* Ajusta a margem esquerda para mover a imagem mais para a direita */
+        }
+
+        img {
+            max-width: 65%; /* Ajusta ao tamanho da janela */
+            height: auto; /* Mantém a proporção da imagem */
+            background-color: transparent; /* Certifica que não haja fundo na imagem */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Retângulo com o título -->
+    <div class="retangulo">
+        <h1>Resposta Certa?</h1>
+    </div>
+
+    <!-- Contêiner da imagem centralizada -->
+    <div class="imagem-centralizada">
+        <a href="desafio1.html"target="_blank">
+            <img src="semfundo.png" alt="Imagem Exemplo"> <!-- Caminho para a imagem local -->
+        </a>
+    </div>
+
+</body>
+</html>
+

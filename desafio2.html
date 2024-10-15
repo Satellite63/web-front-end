@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certa Resposta?</title>
+    <style>
+    table, th, td {
+        border: 4px solid black;
+        padding: 20px; /* Aumenta o espaçamento interno */
+        font-size: 24px; /* Aumenta o tamanho da fonte */
+    }
+    table.center {
+        margin-left: auto; 
+        margin-right: auto;
+        width: 60%; /* Aumenta a largura da tabela */
+    }
+
+        body {
+            background-color: rgb(255, 242, 0); /* Cor de fundo do corpo */
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Ocupa 100% da altura da janela */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Alinha itens no início */
+            align-items: center; /* Centraliza horizontalmente */
+        }
+
+        .retangulo {
+            width: 100vw;  /* Largura total da janela */
+            height: 100px; /* Altura do retângulo */
+            background-color: #b4b4b4; /* Cor do retângulo */
+            border: 2px solid rgb(161, 161, 161); /* Borda do retângulo */
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente o conteúdo */
+            align-items: center; /* Centraliza verticalmente o conteúdo */
+        }
+
+        h1 {
+            font-size: 60px; /* Tamanho da letra */
+            font-family: Georgia, 'Times New Roman', Times, serif; /* Tipo de fonte */
+            color: rgb(255, 255, 255); /* Cor da letra */
+            margin: 0;
+        }
+        h2 {
+            font-size: 30px; /* Tamanho da letra */
+            font-family: Georgia, 'Times New Roman', Times, serif; /* Tipo de fonte */
+            color: rgb(0, 0, 0); /* Cor da letra */
+            margin: 0;
+        }
+
+        .imagemCentralizada1 {
+            z-index: 1; /* Garante que a imagem fique acima do retângulo */
+            margin-top: 50px; /* Espaço entre o retângulo e a imagem */
+            margin-left: 0%; /* Ajusta a margem esquerda para mover a imagem mais para a direita */
+        }
+        .imagemCentralizada2 {
+            z-index: 1; /* Garante que a imagem fique acima do retângulo */
+            margin-top: -106px; /* Espaço entre o retângulo e a imagem */
+            margin-left: 25%; /* Ajusta a margem esquerda para mover a imagem mais para a direita */
+        }
+        .imagemCentralizada3 {
+            z-index: 1; /* Garante que a imagem fique acima do retângulo */
+            margin-top: -107px; /* Espaço entre o retângulo e a imagem */
+            margin-left: 50%; /* Ajusta a margem esquerda para mover a imagem mais para a direita */
+        }
+        .imagemCentralizada4 {
+            z-index: 1; /* Garante que a imagem fique acima do retângulo */
+            margin-top: -98px; /* Espaço entre o retângulo e a imagem */
+            margin-left: 70%; /* Ajusta a margem esquerda para mover a imagem mais para a direita */
+        }
+
+        img {
+            max-width: 20%; /* Ajusta a largura da imagem para 40% da tela */
+            height: auto; /* Mantém a proporção da imagem */
+            background-color: transparent; /* Certifica que não haja fundo na imagem */
+        }
+
+        .textoForadoRetangulo {
+            margin-top: 20px; /* Espaço acima do texto para não sobrepor a imagem */
+            font-size: 24px; /* Tamanho do texto */
+            font-family: Arial, sans-serif; /* Tipo de fonte */
+            color: #000; /* Cor do texto */
+            text-align: center; /* Centraliza o texto */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Retângulo com o título fixado no topo -->
+    <div class="retangulo">
+        <strong></strong><h1>Resposta Certa?</h1></strong>
+    </div>
+    <table class="center">
+        <tr>
+          <th>Computadores</th>
+          <th>CPU</th>
+          <th>GPU</th>
+        </tr> 
+        <tr>
+           <th>PC 1</th>
+           <th> i3 </th>
+           <th>gtx 1050ti</th>
+          </tr>
+          <tr>
+            <th>PC 2</th>
+            <th>i5</th>
+            <th>gtx 1050</th>
+           </tr>  
+        <tr>
+          <th>PC 3 </th>
+          <th>R5</th>
+          <th>gtx 1050</th>
+        </tr>
+        <tr>
+          <th>PC 4</th>
+          <th>Xeon</th>
+          <th>gtx 1060ti</th>
+        </tr>
+      </table>
+    <div class="textoForadoRetangulo">
+        <h2>Selecione o computador com melhor configuração para games</h2>
+    </div>
+
+    
+    <div class="imagemCentralizada1">
+        <a href="perdeu1.html" target="_blank"> <!-- Caminho para o arquivo local -->
+            <img src="computador.png" alt="Imagem Exemplo"> <!-- Caminho para a imagem local -->
+        </a>
+    </div>
+    <div class="imagemCentralizada2">
+        <a href="perdeu1.html" target="_blank"> <!-- Caminho para o arquivo local -->
+            <img src="computador.png" alt="Imagem Exemplo"> <!-- Caminho para a imagem local -->
+        </a>
+    </div>
+    <div class="imagemCentralizada3">
+        <a href="perdeu1.html" target="_blank"> <!-- Caminho para o arquivo local -->
+            <img src="computador.png" alt="Imagem Exemplo"> <!-- Caminho para a imagem local -->
+        </a>
+    </div>
+    <div class="imagemCentralizada4">
+        <a href="Venceu.html" target="_blank"> <!-- Caminho para o arquivo local -->
+            <img src="computador.png" alt="Imagem Exemplo"> <!-- Caminho para a imagem local -->
+        </a>
+    </div>
+ 
+   
+
+</body>
+</html>
