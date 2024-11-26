@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <!-- Metadados básicos da página -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Permite a responsividade em dispositivos móveis -->
+    <title>Home</title> <!-- Título da página -->
+
+    <!-- Importa Chart.js para a criação de gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="Meses.js"></script> <!-- Script externo contendo a lógica de gráficos -->
+
+    <!-- Estilos CSS para personalização da página -->
+    <style>
+        /* Plano de fundo da página */
+        .planoFundo {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            background-position: center; 
+            width: 100%;
+            height: auto;
+            background-image: url('Heraldica TIC-MT1.png'); /* Imagem de fundo */
+            background-repeat: no-repeat, repeat;
+            background-size: cover;
+            background-color: rgba(255, 255, 255, 0.70); /* Fundo translúcido */
+            background-blend-mode: lighten; /* Clareia a imagem de fundo */
+            z-index: -2; /* Nível de sobreposição */
+        }
+        
+        /* Estilos para os botões */
+        .button {
+            background-color: #616743;
+            flex-direction: row;
+            border: none;
+            color: rgb(0, 0, 0);
+            padding: 20px 10px;
+            text-align: center;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            width: 100px;
+            border: 2px solid #465338;
+            z-index: 1;
+            font-family: sans-serif;
+        }
+
+        /* Estilos de hover para os botões */
+        .button:hover {
+            background-color:#959340 ;
+            color:#000000 ;
+        }
+
+        /* Alinha os botões em uma linha horizontal */
+        .botoes {
+            flex-direction: row;
+            height: 50px;
+        }
+
+        /* Container dos gráficos */
+        .graficos {
+            display: flex;
+            margin-top: -10%;
+            height: auto;
+            width: 100%; /* Faz com que a div dos gráficos ocupe 100% da largura */
+            z-index: 1;
+        }
+
+        /* Personaliza o gráfico principal */
+        #myChartTotalChamadas {
+            width: 80% !important;
+            height: 10% !important;
+        }
+
+        /* Estilo dos quadrados informativos */
+        .quadrado {
+            margin-top: 23.3%;
+            margin-left: 80%;
+            width: 340px;
+            height: 150px;
+            background-color: #465338;
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: bolder;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Quadrado menor para exibição de detalhes */
+        .quadradoMenor {
+            margin-left: 81%;
+            margin-top: -6.8%;
+            width: 310px;
+            height: 90px;
+            background-color: #959340;
+            border-radius: 5px;
+            color: rgb(0, 0, 0);
+            font-size: 40px;
+            font-family: fantasy;
+        }
+
+        /* Segundo quadrado para exibição de dados adicionais */
+        .quadrado2 {
+            margin-top: -17%;
+            margin-left: 80%;
+            width: 340px;
+            height: 150px;
+            background-color: #465338;
+            color: white;
+            font-size: 20px;
+            font-weight: bolder;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Quadrado para exibição do total de chamadas */
+        .quadradoTotalChamadas {
+            margin-left: 81%;
+            margin-top: -6.8%;
+            width: 310px;
+            height: 80px;
+            background-color: #959340;
+            border-radius: 5px;
+            color: rgb(0, 0, 0);
+            font-size: 50px;
+            font-family: fantasy;
+        }
+
+        /* Caixa de entrada para busca de zonas */
+        #zonaInput {
+            margin-top: 12%;
+            margin-left: 81% !important;
+            width: 210px;
+            height: 30px;
+            z-index: 2;
+        }
+
+        /* Botão de busca para zona específica */
+        .buttonBuscar {
+            margin-top: -2.15%!important;
+            margin-left: 94%!important;
+            border: none;
+            color: black;
+            padding: 10px 10px;
+            text-align: center;
+            font-size: 14px;
+            margin: 10px;
+            cursor: pointer;
+            width: 100px;
+            height: 36px;
+            border: 2px solid #ab9731;
+            font-family: sans-serif;
+            z-index: 2;
+        }
+
+        /* Estilo de hover para o botão de busca */
+        .buttonBuscar:hover {
+            background-color: #ab9731;
+            color: azure;
+        }
+
+    </style>    
+</head>
+<body>
+    <!-- Div principal que serve como container para o conteúdo -->
+    <div class="planoFundo">
+        
+        <!-- Container para os botões dos meses -->
+        <div class="botoes"> 
+            <!-- Botões para cada mês, que chamam a função gerarGraficoTotalChamadas com o arquivo CSV correspondente -->
+            <button class="button" onclick="gerarGraficoTotalChamadas('janeiro.csv');"><strong>JANEIRO</strong></button>
+            <button class="button" onclick="gerarGraficoTotalChamadas('fevereiro.csv');"><strong>FEVEREIRO</strong></button>
+            <button class="button" onclick="gerarGraficoTotalChamadas('marco.csv');"><strong>MARÇO</strong></button>
+            <button class="button" onclick="gerarGraficoTotalChamadas('abril.csv');"><strong>ABRIL</strong></button>
+            <button class="button" onclick="gerarGraficoTotalChamadas('maio.csv');"><strong>MAIO</strong></button>
+            <button class="button" onclick="gerarGraficoTotalChamadas('junho.csv');"><strong>JUNHO</strong></button>
+            <button class="button" onclick="gerarGraficoTotalChamadas('julho.csv');"><strong>JULHO</strong></button>    
+            <button class="button" onclick="gerarGraficoTotalChamadas('agosto.csv');"><strong>AGOSTO</strong></button>    
+            <button class="button" onclick="gerarGraficoTotalChamadas('setembro.csv');"><strong>SETEMBRO</strong></button>    
+            <button class="button" onclick="gerarGraficoTotalChamadas('outubro.csv');"><strong>OUTUBRO</strong></button>
+            <button class="button" onclick="gerarGraficoTotalChamadas('novembro.csv');"><strong>NOVEMBRO</strong></button>    
+            <button class="button" onclick="gerarGraficoTotalChamadas('dezembro.csv');"><strong>DEZEMBRO</strong></button>  
+            <button class="button" onclick="gerarGraficoTotalChamadas('Anual.csv')"><strong>ANUAL</strong></button>
+            
+            <!-- Quadrado informativo para o maior número de chamadas -->
+            <div class="quadrado" id="quadradoMaiorNumero"><strong>MAIOR NÚMERO DE CHAMADAS</strong></div> 
+            <!-- Quadrado menor para exibir o valor -->
+            <div class="quadradoMenor" id="quadradoMenor"></div>
+            <!-- Outro quadrado informativo para o total de chamadas -->
+            <div class="quadrado2" id="quadradototal"><strong>TOTAL CHAMADAS</strong></div> 
+            <!-- Quadrado para exibir o valor total das chamadas -->
+            <div class="quadradoTotalChamadas" id="quadradoTotalChamadas"></div>
+        </div>
+
+        <!-- Campo de entrada para buscar por zona -->
+        <input type="text" id="zonaInput" placeholder="Digite o nome da zona" />
+        <!-- Botão de busca para a zona -->
+        <button class="buttonBuscar" onclick="buscarZona();"><strong>BUSCAR</strong></button>
+
+        <!-- Div para exibir os gráficos de chamadas -->
+        <div class="graficos">
+            <canvas id="myChartTotalChamadas"></canvas> <!-- Canvas para o gráfico principal -->
+        </div>
+    </div>
+    
+</body>
+</html>
