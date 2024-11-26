@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco Digital - Login</title>
+    <!-- Incluindo o Bootstrap 5 para estilização -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        /* Estilos personalizados */
+        body {
+            background: #f0f8ff; /* Cor de fundo suave */
+        }
+        .card {
+            border-radius: 15px; /* Bordas arredondadas */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+        .card-body {
+            padding: 30px;
+        }
+        .btn-primary {
+            background-color: #007bff; /* Cor personalizada para o botão */
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3; /* Cor ao passar o mouse */
+            border-color: #0056b3;
+        }
+        .form-label {
+            font-weight: bold;
+            color: #495057; /* Cor do texto */
+        }
+        .card-title {
+            color: #007bff;
+        }
+        .footer-text {
+            text-align: center;
+            margin-top: 30px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card" style="width: 100%; max-width: 400px;">
+            <div class="card-body">
+                <h4 class="card-title text-center mb-4">Banco Digital</h4>
+                <h5 class="card-title text-center mb-4">Acesse sua Conta</h5>
+                <form action="cliente.html" method="GET">
+                    <div class="mb-3">
+                        <label for="conta" class="form-label">Número da Conta</label>
+                        <input type="text" class="form-control" id="conta" name="Conta" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="agencia" class="form-label">Número da Agência</label>
+                        <input type="text" class="form-control" id="agencia" name="Agencia" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="senha" class="form-label">Senha</label>
+                        <input type="password" class="form-control" id="senha" name="senha" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-text">
+        <p>© 2024 Banco Digital - Todos os direitos reservados</p>
+    </div>
+
+    <!-- Incluindo o script do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
