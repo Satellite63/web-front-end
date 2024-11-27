@@ -175,7 +175,7 @@ function atualizarTotalChamadas(valor) {
 
 // Chamar as funções para gerar os gráficos de cada mês
 function gerarRelatoriosMensais() {
-    const meses = ['janeiro.csv','fevereiro.csv','marco.csv','abril.csv','maio.csv','junho.csv','julho.csv','agosto.csv','setembro.csv','outubro2.csv','anual.csv'];
+    const meses = ['janeiro.csv','fevereiro.csv','marco.csv','abril.csv','maio.csv','junho.csv','julho.csv','agosto.csv','setembro.csv','outubro.csv','Anual.csv'];
     
     meses.forEach(mes => {
         gerarGraficoTotalChamadas(mes);
