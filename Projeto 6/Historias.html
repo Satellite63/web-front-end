@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <style>
+        /* Estilo geral */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Menu lateral */
+        .menu-lateral {
+            width: 200px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            position: fixed;
+        }
+
+        .menu-lateral h2 {
+            text-align: center;
+        }
+
+        .menu-lateral ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu-lateral ul li {
+            margin: 15px 0;
+        }
+
+        .menu-lateral ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .menu-lateral ul li a:hover {
+            color: #ffcc00;
+        }
+
+        /* Conteúdo principal */
+        .conteudo {
+            margin-left: 250px; /* Espaço para o menu fixo */
+            flex: 1;
+            padding: 30px;
+            background-color: #f4f4f4;
+        }
+
+        .conteudo h1 {
+            color: #333;
+            font-size: 2.5em;
+        }
+
+        .conteudo p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .botao:hover {
+            background-color: #ffcc00;
+        }
+
+        /* Rodapé */
+        .rodape {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9em;
+            margin-top: auto;
+        }
+
+        .rodape a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .rodape a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menu lateral -->
+    <div class="menu-lateral">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Página Inicial</a></li>
+            <li><a href="https://www.google.com/">Google</a></li>
+            <li><a href="https://ifmt.edu.br/">IFMT</a></li>
+            <li><a href="mailto:vicente.farias@estudante.ifmt.edu.br?subject=Prezado, venho por meio deste">Contato</a></li>
+        </ul>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="conteudo">
+        <h1>Nunca Vi Imbu Ce Tao Gostoso!!!</h1>
+        <p>
+            Era uma vez, numa pequena cidade do interior do sertão, onde as tardes de dezembro eram quentes e o vento trazia o cheiro da terra seca misturado ao doce aroma de imbu. Por ali, todo mundo sabia: quando o imbu amadurecia, era época de festa, correria e muita risada. Era o "tempo do imbu", e ninguém levava isso mais a sério do que Joãozinho e seus amigos.
+
+Joãozinho, um menino magrelo de cabelo bagunçado, era o líder da turma. Ele conhecia todos os pés de imbu da região — e não só isso, sabia exatamente quais tinham os frutos mais doces e suculentos. Com um pedaço de corda na mão, ele reunia os amigos e gritava pela rua de terra:
+"Vamo simbora, que hoje é dia de chupar imbu ingual um doido!"
+
+O destino era o grande pé de imbu do seu Zeca, um velho carrancudo que fingia não gostar da bagunça das crianças. Mas no fundo, ele esperava a chegada delas, só para ouvir o riso e a gritaria que enchiam o quintal.
+
+Os meninos corriam descalços, chutando poeira, e cada um carregava um pequeno balde ou uma lata velha para encher de imbu. Joãozinho era o mais ágil. Subia no pé de imbu como se fosse um gato, balançando os galhos para derrubar os frutos mais maduros. Lá de cima, ele berrava:
+"Corre, Tonho! Pega aquele ali que caiu pertim da cerca!"
+
+E quando caía um fruto ainda verde, ele avisava com desdém:
+"Esse tá amargo que só! Deixa pros passarinhos!"
+
+Debaixo da sombra do imbuzeiro, a turma se sentava para começar o banquete. Era cada um com a boca cheia, rindo, cuspindo caroço pra todo lado. A competição era sempre a mesma: quem conseguia chupar mais imbuzinhos sem fazer careta com os mais azedinhos. Joãozinho, claro, era campeão em disfarçar a careta, mas todo mundo sabia que ele sofria por dentro.
+
+O sol ia baixando, pintando o céu de laranja, e os meninos voltavam para casa com as camisas sujas de terra e as mãos grudentas do sumo dos imbuzinhos. "Valeu a pena!", pensava Joãozinho, lambendo os dedos e já planejando a próxima aventura.
+
+No sertão, o tempo do imbu não era só uma época do ano. Era um jeito de viver, um momento em que a simplicidade da vida fazia cada dia parecer uma festa. E assim, entre chupar imbuzinhos e gargalhar, os meninos cresciam, guardando no coração o sabor agridoce da infância.
+        </p>
+        <p>
+            Navegue pelas páginas no menu para descobrir mais sobre o que oferecemos.
+        </p>
+        <a class="botao" href="https://www.youtube.com/watch?v=bKnT6GMBp74">Saiba Mais</a>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <p>&copy; 2024 Vicentinho Sistem. Todos os direitos reservados. | Desenvolvido por <a href="https://www.instagram.com/arthur_vf13/">Vicentinho Farias</a></p>
+    </footer>
+</body>
+</html>
