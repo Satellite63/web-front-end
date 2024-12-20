@@ -3,9 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
+    <title>Menu Lateral</title>
+
+    <style>
+        /* Estilos gerais para a página */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex; /* Configura o layout em linha para o menu lateral e conteúdo */
+        }
+
+        /* Estilo da caixa lateral */
+        .menuLateral {
+            width: 200px; /* Largura fixa da lateral */
+            height: 100vh; /* Altura total da tela */
+            background-color: rgb(54, 30, 151); /* Cor de fundo */
+            color: white; /* Cor do texto */
+            padding: 20px; /* Espaçamento interno */
+            box-sizing: border-box; /* Inclui padding no tamanho total */
+        }
+
+        /* Lista dentro do menu lateral */
+        .menuLateral ul {
+            list-style: none; /* Remove marcadores da lista */
+            padding: 0; /* Remove padding da lista */
+        }
+
+        /* Itens da lista */
+        .menuLateral ul li {
+            margin: 15px 0; /* Espaçamento entre os itens */
+        }
+
+        /* Links dos itens */
+        .menuLateral ul li a {
+            text-decoration: none; /* Remove sublinhado dos links */
+            color: white; /* Cor do texto do link */
+        }
+
+        .menuLateral ul li a:hover {
+            text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+        }
+
+        /* Conteúdo principal */
+        .conteudo {
+            flex: 1; /* Ocupa o espaço restante ao lado do menu */
+            padding: 20px; /* Espaçamento interno */
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    
+    <!-- Caixa lateral -->
+    <div class="menuLateral">
+        <h2>MENU</h2>
+        <ul>
+            <li><a href="inicialPage.html">Home</a></li>
+            <li><a href="">Grafico ERB´S</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="conteudo">
+        <h1>SISTEMA DE RADIO GERENCIAMENTO</h1>
+    </div>
 </body>
 </html>
