@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!-- Importa Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="meses.js"></script>
+
+    <!-- Estilos CSS -->
+    <style>
+        /* Plano de fundo */
+        .planoFundo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            min-height: 100vh;
+            background-image: url('planoFundo.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: rgba(255, 255, 255, 0.0);
+            background-blend-mode: lighten;
+            z-index: -2;
+        }
+
+        /* Botões */
+        .botoes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            background-color: #C0C0C0;
+            border: none;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 14px;
+            cursor: pointer;
+            border: 2px solid #3f31ab;
+            font-family: sans-serif;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #3f31ab;
+            color: black;
+        }
+
+        /* Layout do gráfico e quadrados */
+        .conteudo {
+            display: grid;
+            grid-template-columns: 3fr 1fr; /* Gráfico maior à esquerda e quadrados menores à direita */
+            gap: 20px;
+            width: 95%;
+            margin: 20px auto;
+        }
+
+        .graficos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #myChartTotalChamadas {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Quadrados informativos */
+        .quadrados {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .quadrado, .quadradoMenor, .quadrado2, .quadradoTotalChamadas {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .quadrado {
+            background-color: #C0C0C0;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .quadradoMenor {
+            background-color: #ffffff;
+            color: black;
+            font-size: 24px;
+            font-family: fantasy;
+            border-radius: 5px;
+        }
+
+        .quadrado2 {
+            background-color: #C0C0C0;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .quadradoTotalChamadas {
+            background-color: #ffffff;
+            color: black;
+            font-size: 28px;
+            font-family: fantasy;
+            border-radius: 5px;
+        }
+
+        /* Entrada de texto e botão de busca */
+        #zonaInput {
+            width: 90%;
+            max-width: 300px;
+            height: 30px;
+            margin: 10px auto;
+        }
+
+        .buttonBuscar {
+            width: auto;
+            padding: 10px 20px;
+            margin: 10px auto;
+            border: none;
+            color: black;
+            text-align: center;
+            font-size: 14px;
+            cursor: pointer;
+            border: 2px solid #ab9731;
+            font-family: sans-serif;
+            transition: background-color 0.3s ease;
+        }
+
+        .buttonBuscar:hover {
+            background-color: #ab9731;
+            color: white;
+        }
+
+        /* Media queries para telas menores */
+        @media (max-width: 768px) {
+            .conteudo {
+                grid-template-columns: 1fr; /* Torna os elementos empilhados */
+            }
+
+            .quadrados {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 10px;
+                justify-content: center;
+            }
+
+            .quadrado, .quadradoMenor, .quadrado2, .quadradoTotalChamadas {
+                width: 45%; /* Reduz tamanho para caber lado a lado em telas menores */
+            }
+
+            #zonaInput {
+                max-width: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .button {
+                font-size: 12px;
+                padding: 8px 12px;
+            }
+
+            .quadrado, .quadradoMenor, .quadrado2, .quadradoTotalChamadas {
+                width: 100%;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Div principal que serve como container para o conteúdo -->
+    <div class="planoFundo">
+        <!-- Botões -->
+        <div class="botoes"> 
+            <button class="button" onclick="gerarGraficoTotalChamadas('janeiro.csv');"><strong>JANEIRO</strong></button>
+            <button class="button" onclick="gerarGraficoTotalChamadas('fevereiro.csv');"><strong>FEVEREIRO</strong></button>
+            <button class="button" onclick="gerarGraficoTotalChamadas('março.csv');"><strong>MARÇO</strong></button>
+            <button class="button" onclick="gerarGraficoTotalChamadas('abril.csv');"><strong>ABRIL</strong></button>
+            <button class="button" onclick="gerarGraficoTotalChamadas('maio.csv');"><strong>MAIO</strong></button>
+            <button class="button" onclick="gerarGraficoTotalChamadas('junho.csv');"><strong>JUNHO</strong></button>
+            <button class="button" onclick="gerarGraficoTotalChamadas('julho.csv');"><strong>JULHO</strong></button>
+            <button class="button" onclick="gerarGraficoTotalChamadas('agosto.csv');"><strong>AGOSTO</strong></button>
+            <button class="button" onclick="gerarGraficoTotalChamadas('setembro.csv');"><strong>SETEMBRO</strong></button>
+            <button class="button" onclick="gerarGraficoTotalChamadas('outubro.csv');"><strong>OUTUBRO</strong></button>
+            <button class="button" onclick="gerarGraficoTotalChamadas('novembro.csv');"><strong>NOVEMBRO</strong></button>
+            <button class="button" onclick="gerarGraficoTotalChamadas('dezembro.csv');"><strong>DEZEMBRO</strong></button>
+            <button class="button" onclick="gerarGraficoTotalChamadas('anual.csv')"><strong>ANUAL</strong></button>
+        </div>
+
+        <!-- Layout dos gráficos e quadrados -->
+        <div class="conteudo">
+            <!-- Gráfico -->
+            <div class="graficos">
+                <canvas id="myChartTotalChamadas"></canvas>
+            </div>
+
+            <!-- Quadrados informativos -->
+            <div class="quadrados">
+                <div class="quadrado" id="quadradoMaiorNumero"><strong>MAIOR NÚMERO DE CHAMADAS</strong></div> 
+                <div class="quadradoMenor" id="quadradoMenor"></div>
+                <div class="quadrado2" id="quadradototal"><strong>TOTAL CHAMADAS</strong></div>
+                <div class="quadradoTotalChamadas" id="quadradoTotalChamadas"></div>
+            </div>
+        </div>
+
+        <!-- Campo de busca -->
+        <input type="text" id="zonaInput" placeholder="Digite o nome da zona" />
+        <button class="buttonBuscar" onclick="buscarZona();"><strong>BUSCAR</strong></button>
+    </div>
+</body>
+</html>
