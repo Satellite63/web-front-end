@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exportar para XLSX</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    input {
+      flex: 1;
+      margin-left: 10px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Gravar Dados em XLSX</h1>
+    <form id="dataForm">
+      <label>
+        ISSI: <input type="text" id="issi" required>
+      </label>
+      <label>
+        Descrição: <input type="text" id="descricao" required>
+      </label>
+      <label>
+        Ativação: <input type="date" id="ativacao" required>
+      </label>
+      <label>
+        Patrimônio: <input type="text" id="patrimonio" required>
+      </label>
+      <label>
+        TEI: <input type="text" id="tei" required>
+      </label>
+      <button type="button" id="addData">Adicionar</button>
+      <button type="button" id="exportXLSX">Exportar para XLSX</button>
+    </form>
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th>ISSI</th>
+          <th>Descrição</th>
+          <th>Ativação</th>
+          <th>Patrimônio</th>
+          <th>TEI</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+ 
