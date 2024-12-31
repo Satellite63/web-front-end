@@ -1,0 +1,901 @@
+:root { 
+  /* Definição das variáveis CSS globais para centralizar estilos reutilizáveis. */
+  --white-color:                  #ffffff; /* Cor branca padrão. */
+  --primary-color:                #414ac5; /* Cor primária do tema. */
+  --secondary-color:              #a4a4a4; /* Cor secundária do tema. */
+  --section-bg-color:             #f0f8ff; /* Cor de fundo para seções. */
+  --custom-btn-bg-color:          #001cf3; /* Cor de fundo para botões personalizados. */
+  --custom-btn-bg-hover-color:    #a4a4a4; /* Cor de fundo ao passar o mouse nos botões. */
+  --dark-color:                   #000000; /* Cor preta padrão. */
+  --p-color:                      #717275; /* Cor de texto para parágrafos. */
+  --border-color:                 #7fffd4; /* Cor de borda padrão. */
+  --link-hover-color:             #a4a4a4; /* Cor dos links ao passar o mouse. */
+
+  --body-font-family:             'Unbounded', cursive; /* Fonte padrão do corpo. */
+
+  --h1-font-size:                 74px; /* Tamanho da fonte para h1. */
+  --h2-font-size:                 46px; /* Tamanho da fonte para h2. */
+  --h3-font-size:                 32px; /* Tamanho da fonte para h3. */
+  --h4-font-size:                 28px; /* Tamanho da fonte para h4. */
+  --h5-font-size:                 24px; /* Tamanho da fonte para h5. */
+  --h6-font-size:                 22px; /* Tamanho da fonte para h6. */
+  --p-font-size:                  20px; /* Tamanho da fonte para parágrafos. */
+  --btn-font-size:                16px; /* Tamanho da fonte para botões. */
+  --copyright-font-size:          14px; /* Tamanho da fonte para textos de copyright. */
+
+  --border-radius-large:          100px; /* Raio de borda grande. */
+  --border-radius-medium:         20px; /* Raio de borda médio. */
+  --border-radius-small:          10px; /* Raio de borda pequeno. */
+
+  --font-weight-thin:             200; /* Peso da fonte para textos finos. */
+  --font-weight-light:            300; /* Peso da fonte para textos leves. */
+  --font-weight-normal:           400; /* Peso padrão para textos. */
+  --font-weight-bold:             700; /* Peso da fonte para textos em negrito. */
+}
+
+body {
+  background-color: var(--white-color); /* Define a cor de fundo como branco. */
+  font-family: var(--body-font-family); /* Aplica a fonte padrão definida em :root. */
+}
+
+/*---------------------------------------
+  TYPOGRAPHY               
+-----------------------------------------*/
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--dark-color); /* Aplica cor preta aos títulos h2 a h6. */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-bold); /* Define peso de fonte em negrito para todos os títulos. */
+}
+
+h1 {
+  font-size: var(--h1-font-size); /* Aplica o tamanho de fonte específico para h1. */
+}
+
+h2 {
+  font-size: var(--h2-font-size); /* Aplica o tamanho de fonte específico para h2. */
+}
+
+h3 {
+  font-size: var(--h3-font-size); /* Aplica o tamanho de fonte específico para h3. */
+}
+
+h4 {
+  font-size: var(--h4-font-size); /* Aplica o tamanho de fonte específico para h4. */
+}
+
+h5 {
+  font-size: var(--h5-font-size); /* Aplica o tamanho de fonte específico para h5. */
+}
+
+h6 {
+  font-size: var(--h6-font-size); /* Aplica o tamanho de fonte específico para h6. */
+}
+
+p {
+  color: var(--p-color); /* Define a cor de texto dos parágrafos. */
+  font-size: var(--p-font-size); /* Aplica o tamanho de fonte dos parágrafos. */
+  font-weight: var(--font-weight-light); /* Define peso de fonte leve para parágrafos. */
+}
+
+ul li {
+  color: var(--p-color); /* Define a cor do texto em itens de lista. */
+  font-size: var(--p-font-size); /* Aplica o tamanho de fonte aos itens de lista. */
+  font-weight: var(--font-weight-light); /* Define peso de fonte leve para itens de lista. */
+}
+
+a, 
+button {
+  touch-action: manipulation; /* Melhora a responsividade em dispositivos touch. */
+  transition: all 0.3s; /* Adiciona uma transição suave para todas as mudanças de estilo. */
+}
+
+a {
+  display: inline-block; /* Permite que links se comportem como elementos em bloco. */
+  color: var(--primary-color); /* Define a cor padrão dos links. */
+  text-decoration: none; /* Remove sublinhado dos links. */
+}
+
+a:hover {
+  color: var(--link-hover-color); /* Altera a cor dos links ao passar o mouse. */
+}
+
+b,
+strong {
+  font-weight: var(--font-weight-bold); /* Aplica peso de fonte em negrito. */
+}
+
+/*---------------------------------------
+  SECTION               
+-----------------------------------------*/
+.section-padding {
+  padding: 100px 50px; /* Adiciona espaçamento em torno das seções. */
+}
+
+.section-bg {
+  background-color: var(--section-bg-color); /* Define a cor de fundo da seção. */
+}
+
+.section-overlay {
+  background-color: var(--dark-color); /* Define um fundo preto para o overlay. */
+  position: absolute; /* Posiciona o overlay como absoluto. */
+  top: 0; /* Alinha ao topo do elemento pai. */
+  left: 0; /* Alinha à esquerda do elemento pai. */
+  pointer-events: none; /* Impede interações do usuário com o overlay. */
+  width: 100%; /* Faz o overlay ocupar toda a largura disponível. */
+  height: 100%; /* Faz o overlay ocupar toda a altura disponível. */
+  opacity: 0.45; /* Define a opacidade do overlay. */
+}
+
+.section-overlay + .container {
+  position: relative; /* Define a posição relativa do contêiner após o overlay. */
+}
+
+.back-top-icon {
+  font-size: var(--h2-font-size); /* Define o tamanho de fonte para o ícone de voltar ao topo. */
+}
+/*---------------------------------------
+  CUSTOM BLOCK BACKGROUND OVERLAY               
+-----------------------------------------*/
+.custom-block-bg-overlay-wrap {
+  background: var(--primary-color); /* Define a cor de fundo do bloco personalizado. */
+  border-radius: var(--border-radius-medium); /* Aplica bordas arredondadas médias. */
+  transition: all 0.3s ease; /* Adiciona transição suave para todas as mudanças de estilo. */
+}
+
+.custom-block-bg-overlay-wrap:hover {
+  background: linear-gradient(90deg, #9e998f 0%, #adacd7 100%); /* Altera o fundo para um gradiente ao passar o mouse. */
+  transform: scale(1.05); /* Amplia o bloco ligeiramente ao passar o mouse. */
+}
+
+.custom-block-bg-overlay-image {
+  border-radius: var(--border-radius-medium); /* Aplica bordas arredondadas médias. */
+  display: block; /* Exibe a imagem como um bloco. */
+  margin: auto; /* Centraliza a imagem dentro de seu contêiner. */
+  height: 100%; /* Faz a imagem ocupar toda a altura do contêiner. */
+  object-fit: cover; /* Garante que a imagem preencha o espaço proporcionalmente. */
+  transform: rotate(8deg); /* Rotaciona a imagem ligeiramente. */
+}
+
+.custom-block-bg-overlay-wrap:hover .team-info {
+  bottom: 10px; /* Move a informação da equipe para baixo ao passar o mouse. */
+}
+
+/*---------------------------------------
+  CUSTOM BUTTON               
+-----------------------------------------*/
+.custom-btn {
+  background: var(--custom-btn-bg-color); /* Define a cor de fundo padrão do botão. */
+  border: 2px solid transparent; /* Define uma borda transparente ao redor do botão. */
+  border-radius: var(--border-radius-large); /* Aplica bordas arredondadas grandes. */
+  color: var(--white-color); /* Define a cor do texto como branco. */
+  font-size: var(--btn-font-size); /* Define o tamanho da fonte do botão. */
+  font-weight: var(--font-weight-bold); /* Aplica fonte em negrito ao texto do botão. */
+  line-height: normal; /* Define o espaçamento entre linhas como normal. */
+  transition: all 0.3s; /* Adiciona uma transição suave para mudanças de estilo. */
+  padding: 10px 20px; /* Adiciona espaçamento interno ao botão. */
+}
+
+.custom-btn:hover {
+  background: var(--custom-btn-bg-hover-color); /* Altera a cor de fundo ao passar o mouse. */
+  color: var(--white-color); /* Mantém o texto branco ao passar o mouse. */
+}
+
+.custom-border-btn {
+  background: transparent; /* Torna o fundo do botão transparente. */
+  border: 2px solid var(--custom-btn-bg-color); /* Adiciona uma borda colorida ao botão. */
+  color: var(--custom-btn-bg-color); /* Altera a cor do texto para combinar com a borda. */
+}
+
+.custom-btn-bg-white {
+  border-color: var(--white-color); /* Define a borda como branca. */
+  color: var(--white-color); /* Altera a cor do texto para branco. */
+}
+
+.custom-btn-italic {
+  font-style: italic; /* Define o estilo do texto como itálico. */
+}
+
+/*---------------------------------------
+  NAVIGATION              
+-----------------------------------------*/
+.sidebar {
+  background: var(--primary-color); /* Define a cor de fundo da barra lateral. */
+  background-repeat: no-repeat; /* Impede a repetição do fundo. */
+  background-size: cover; /* Faz o fundo ocupar toda a área disponível. */
+  background-position: center; /* Centraliza o fundo. */
+  position: fixed; /* Fixa a barra lateral na tela. */
+  top: 0; /* Alinha ao topo da tela. */
+  bottom: 0; /* Alinha ao fundo da tela. */
+  left: 0; /* Alinha à esquerda da tela. */
+  z-index: 100; /* Define a prioridade de sobreposição. */
+  padding: 50px 0 0; /* Adiciona espaçamento na parte superior. */
+}
+
+.sidebar-sticky {
+  height: calc(100vh - 48px); /* Ajusta a altura para ocupar a tela menos 48px. */
+  overflow-x: hidden; /* Oculta o excesso horizontal. */
+  overflow-y: auto; /* Permite rolagem vertical. */
+  text-align: center; /* Centraliza o texto dentro da barra lateral. */
+  position: relative; /* Define posição relativa para controle interno. */
+}
+
+.navbar {
+  background: transparent; /* Torna o fundo da barra de navegação transparente. */
+  z-index: 9; /* Define a prioridade de sobreposição. */
+}
+
+.logo-image {
+  width: 154px; /* Define a largura da logo. */
+  height: auto; /* Mantém a proporção da altura com base na largura. */
+  margin-bottom: 70px; /* Adiciona espaço abaixo da logo. */
+}
+
+#sidebarMenu .nav-link {
+  color: var(--dark-color); /* Define a cor do texto dos links. */
+  font-size: var(--p-font-size); /* Aplica o tamanho de fonte dos links. */
+  font-weight: var(--font-weight-bold); /* Define os links como negrito. */
+  text-transform: uppercase; /* Transforma o texto dos links em letras maiúsculas. */
+  position: relative; /* Define posição relativa para ajustes internos. */
+}
+
+#sidebarMenu .nav-link.active, 
+#sidebarMenu .nav-link:hover {
+  color: var(--white-color); /* Altera a cor dos links ativos ou ao passar o mouse para branco. */
+}
+
+.navbar-toggler {
+  background: var(--primary-color); /* Define a cor de fundo do botão de alternar. */
+  border-radius: var(--border-radius-large); /* Aplica bordas arredondadas grandes. */
+  position: fixed; /* Fixa o botão na tela. */
+  top: 0; /* Alinha ao topo. */
+  bottom: 0; /* Alinha ao fundo. */
+  right: 0; /* Alinha à direita da tela. */
+  z-index: 222; /* Define alta prioridade de sobreposição. */
+  border: 0; /* Remove borda do botão. */
+  padding: 0; /* Remove espaçamento interno do botão. */
+  cursor: pointer; /* Aplica o cursor de ponteiro ao passar o mouse. */
+  margin: 25px; /* Adiciona margem ao redor do botão. */
+  width: 55px; /* Define a largura do botão. */
+  height: 55px; /* Define a altura do botão. */
+  outline: none; /* Remove o contorno padrão. */
+}
+
+/* Remove o contorno e a sombra ao focar no botão toggle */
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Define estilo para o ícone do botão toggle quando o menu está expandido */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  background: transparent; /* Remove o fundo */
+}
+
+/* Define animação para os elementos antes e depois do ícone quando expandido */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before,
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+  transition: top 300ms 50ms ease, -webkit-transform 300ms 350ms ease;
+  transition: top 300ms 50ms ease, transform 300ms 350ms ease;
+  transition: top 300ms 50ms ease, transform 300ms 350ms ease, -webkit-transform 300ms 350ms ease;
+  top: 0; /* Reposiciona as linhas */
+}
+
+/* Rotaciona a linha superior para formar um 'X' */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+  transform: rotate(45deg); /* Rotação de 45 graus */
+}
+
+/* Rotaciona a linha inferior para formar um 'X' */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+  transform: rotate(-45deg); /* Rotação de -45 graus */
+}
+
+/* Estilo geral do ícone do botão toggle */
+.navbar-toggler .navbar-toggler-icon {
+  background: var(--white-color); /* Define cor branca como fundo */
+  transition: background 10ms 300ms ease; /* Animação para mudança de fundo */
+  display: block;
+  margin: auto; /* Centraliza horizontalmente */
+  width: 25px; /* Largura do ícone */
+  height: 2px; /* Altura do ícone (fino como uma linha) */
+  position: relative;
+}
+
+/* Estilo para as linhas superior e inferior do ícone */
+.navbar-toggler .navbar-toggler-icon:before,
+.navbar-toggler .navbar-toggler-icon:after {
+  transition: top 300ms 350ms ease, -webkit-transform 300ms 50ms ease;
+  transition: top 300ms 350ms ease, transform 300ms 50ms ease;
+  transition: top 300ms 350ms ease, transform 300ms 50ms ease, -webkit-transform 300ms 50ms ease;
+  position: absolute; /* Absoluto para posicionar em relação ao ícone principal */
+  right: 0;
+  left: 0;
+  background: var(--white-color); /* Define cor branca */
+  width: 25px; /* Largura das linhas */
+  height: 2px; /* Altura das linhas */
+  content: ''; /* Gera os elementos pseudo */
+}
+
+/* Posiciona a linha superior acima do centro */
+.navbar-toggler .navbar-toggler-icon::before {
+  top: -8px; /* Eleva 8px acima do centro */
+}
+
+/* Posiciona a linha inferior abaixo do centro */
+.navbar-toggler .navbar-toggler-icon::after {
+  top: 8px; /* Move 8px abaixo do centro */
+}
+
+/*---------------------------------------
+  HERO SECTION        
+-----------------------------------------*/
+
+/* Configuração geral da seção hero */
+.hero-section {
+  background-image: url('../images/scanercar.jpg'); /* Imagem de fundo */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+  background-attachment: fixed; /* Fixa a imagem enquanto rola a página */
+  background-size: cover; /* Faz a imagem cobrir toda a seção */
+  background-position: center; /* Centraliza a imagem */
+  position: relative;
+  overflow: hidden; /* Esconde conteúdo que sai dos limites */
+  padding: 50px; /* Espaçamento interno */
+  padding-bottom: 0; /* Remove o espaçamento inferior */
+  min-height: 665px; /* Altura mínima da seção */
+  border-bottom: 15px solid var(--primary-color); /* Borda inferior colorida */
+}
+
+/* Ajusta a altura da seção em telas maiores */
+@media screen and (min-width: 991px) {
+  .hero-section {
+    height: calc(100vh - 0px); /* Altura da tela inteira */
+  }
+}
+
+/* Adiciona um gradiente sobreposto à seção */
+.hero-section::after {
+  content: ""; /* Cria um elemento vazio para o gradiente */
+  background: linear-gradient(90deg, #9e998f 0%, #adacd7 100%); /* Gradiente de cor */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.65; /* Transparência do gradiente */
+}
+
+/* Garante que o conteúdo tenha prioridade sobre os estilos de fundo */
+.hero-section .container {
+  position: relative;
+  z-index: 2; /* Eleva o container acima do fundo */
+}
+
+/* Estilo para o bloco personalizado na seção */
+.custom-block {
+  border: 10px solid var(--primary-color); /* Borda colorida */
+  border-radius: 100%; /* Forma circular */
+  position: absolute;
+  z-index: 2; /* Eleva o bloco acima de outros elementos */
+  bottom: -60px; /* Move para fora da borda inferior */
+  right: -60px; /* Move para fora da borda direita */
+  padding: 50px 90px 50px 50px; /* Espaçamento interno */
+  width: 360px; /* Largura fixa */
+  height: 360px; /* Altura fixa */
+}
+
+/* Botão dentro do bloco personalizado */
+.custom-block .custom-btn {
+  background: var(--primary-color); /* Fundo colorido principal */
+}
+
+/* Estilo hover para o botão */
+.custom-block .custom-btn:hover {
+  background: var(--secondary-color); /* Altera para a cor secundária ao passar o mouse */
+}
+
+/* Estilo para a imagem dentro do bloco */
+.custom-block-image {
+  border: 10px solid var(--primary-color); /* Borda colorida */
+  border-radius: 100%; /* Forma circular */
+  position: absolute;
+  top: -60px; /* Move para fora da borda superior */
+  right: 20px;
+  left: 0;
+  width: 120px; /* Tamanho da imagem */
+  height: 120px;
+  margin: auto; /* Centraliza horizontalmente */
+  object-fit: cover; /* Faz a imagem preencher o círculo */
+}
+
+/*---------------------------------------
+  ABOUT SECTION              
+-----------------------------------------*/
+
+/* Estiliza os títulos da seção "About" */
+.about-section h6 {
+  color: var(--secondary-color); /* Define a cor dos títulos como a cor secundária */
+}
+
+/* Estilo para a imagem de fundo sobreposta */
+.about-section .custom-block-bg-overlay-image {
+  width: 100%; /* A imagem ocupa toda a largura do container */
+  max-height: 250px; /* Altura máxima da imagem */
+}
+
+/* Posiciona a sobreposição da imagem no layout */
+.about-section .custom-block-bg-overlay-wrap {
+  position: relative; /* Posiciona em relação ao container pai */
+}
+
+/* Estiliza as informações da equipe */
+.team-info {
+  background: var(--white-color); /* Fundo branco */
+  border-radius: var(--border-radius-large); /* Arredonda os cantos */
+  position: absolute; /* Posicionamento absoluto dentro do container */
+  bottom: 0; /* Posiciona na parte inferior */
+  right: 0;
+  left: 0;
+  margin: 10px 40px; /* Margem para espaçamento interno */
+  padding: 10px 17px 10px 20px; /* Espaçamento interno */
+  transition: all 0.3s ease; /* Transição suave para alterações de estilo */
+}
+
+/*---------------------------------------
+  FEATURED SECTION               
+-----------------------------------------*/
+
+/* Configuração geral da seção "Featured" */
+.featured-section {
+  background-image: url('../images/mecanigoamigo.webp'); /* Define imagem de fundo */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+  background-attachment: fixed; /* Fixa a imagem ao rolar a página */
+  background-size: cover; /* Faz a imagem cobrir toda a seção */
+  position: relative;
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo para o título na seção "Featured" */
+.featured-section h2 {
+  color: var(--secondary-color); /* Define a cor do título como a cor secundária */
+}
+
+/* Estilo para os parágrafos na seção "Featured" */
+.featured-section p {
+  color: var(--white-color); /* Define a cor do texto como branca */
+}
+
+/* Destaque no texto (bold ou marcadores) */
+.featured-section strong {
+  background: var(--primary-color); /* Fundo com a cor principal */
+  border-radius: var(--border-radius-medium); /* Arredonda os cantos */
+  display: inline-block; /* Faz o elemento ocupar apenas o espaço necessário */
+  margin-top: 10px; /* Espaçamento acima do texto */
+  padding: 10px 20px; /* Espaçamento interno */
+}
+
+/*---------------------------------------
+  SERVICES SECTION             
+-----------------------------------------*/
+
+/* Estilo geral dos thumbnails de serviços */
+.services-thumb {
+  border-radius: var(--border-radius-medium); /* Arredonda os cantos */
+  position: relative;
+  overflow: hidden; /* Esconde conteúdo que ultrapassa os limites */
+}
+
+/* Estilo ao passar o mouse sobre os thumbnails */
+.services-thumb:hover .services-info {
+  border-color: var(--primary-color); /* Altera a cor da borda para a cor principal */
+  border-width: 5px; /* Aumenta a espessura da borda */
+}
+
+/*---------------------------------------
+  SERVICES THUMBNAILS             
+-----------------------------------------*/
+
+/* Aumenta levemente a imagem ao passar o mouse no thumbnail */
+.services-thumb:hover .services-image {
+  transform: scale(1.05); /* Aplica uma transformação para ampliar a imagem em 5% */
+}
+
+/* Estilo geral das imagens dentro dos thumbnails */
+.services-image {
+  border-radius: var(--border-radius-medium); /* Arredonda os cantos da imagem */
+  display: block; /* Faz a imagem se comportar como um bloco */
+  margin: auto; /* Centraliza a imagem horizontalmente */
+  transition: all 0.3s; /* Suaviza as transições de transformações */
+}
+
+/* Estilo para o preço exibido dentro dos thumbnails */
+.services-thumb-price {
+  background: var(--primary-color); /* Fundo com a cor principal */
+  border-radius: var(--border-radius-medium); /* Arredonda os cantos */
+  font-size: var(--copyright-font-size); /* Define o tamanho da fonte */
+  margin-left: auto; /* Alinha o elemento à direita */
+  padding: 5px 10px; /* Espaçamento interno */
+}
+
+/* Estilo para as informações sobre os serviços */
+.services-info {
+  border-radius: var(--border-radius-medium); /* Arredonda os cantos */
+  border: 1px solid var(--white-color); /* Define uma borda branca */
+  position: absolute; /* Posicionamento absoluto dentro do container */
+  top: 0; /* Posiciona no topo */
+  bottom: 0; /* Posiciona na base */
+  right: 0; /* Alinha à direita */
+  left: 0; /* Alinha à esquerda */
+  margin: 20px; /* Espaçamento interno */
+  padding: 25px 30px; /* Espaçamento interno superior/inferior e lateral */
+  transition: all 0.3s ease; /* Suaviza as alterações visuais */
+}
+
+/* Estilo para os títulos dentro das informações de serviços */
+.services-info h4 {
+  color: var(--white-color); /* Define a cor do título como branca */
+}
+
+/*---------------------------------------
+  PRICE LIST              
+-----------------------------------------*/
+
+/* Estilo geral da seção de lista de preços */
+.price-list-section {
+  padding-top: 100px; /* Espaçamento superior */
+  padding-bottom: 100px; /* Espaçamento inferior */
+}
+
+/* Configuração do layout das miniaturas na lista de preços */
+.price-list-thumb-wrap {
+  padding-right: 50px; /* Espaçamento à direita */
+}
+
+/* Espaçamento entre as miniaturas de preços */
+.price-list-thumb {
+  margin-bottom: 10px; /* Espaçamento inferior entre os itens */
+}
+
+/* Remove o espaçamento inferior no último item */
+.price-list-thumb:last-child {
+  margin-bottom: 0;
+}
+
+/* Estilo para o texto em destaque dentro das miniaturas */
+.price-list-thumb h6 strong {
+  color: var(--primary-color); /* Cor do texto destacado */
+}
+
+/* Linha divisória dentro das miniaturas */
+.price-list-thumb-divider {
+  background: var(--p-color); /* Cor da linha */
+  flex: auto; /* Permite que a linha se ajuste ao espaço disponível */
+  height: 2px; /* Altura da linha */
+  margin: auto 15px 0; /* Espaçamento ao redor da linha */
+}
+
+/* Remove o espaçamento interno na sobreposição da lista de preços */
+.price-list-section .custom-block-bg-overlay-wrap {
+  padding: 0;
+}
+
+/*---------------------------------------
+  BOOKING SECTION            
+-----------------------------------------*/
+
+/* Estilo geral da seção de reservas */
+.booking-section {
+  background-image: url('../images/vintage-chair-barbershop.jpg'); /* Imagem de fundo */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+  background-attachment: fixed; /* Fixa a imagem ao rolar a página */
+  background-size: cover; /* Faz a imagem cobrir toda a seção */
+  background-position: center; /* Centraliza a imagem */
+}
+
+/* Estilo para o formulário de reservas */
+.booking-form {
+  background: var(--white-color); /* Fundo branco */
+  border-radius: var(--border-radius-medium); /* Arredonda os cantos */
+  padding: 65px; /* Espaçamento interno */
+}
+
+/*---------------------------------------
+  CONTACT SECTION            
+-----------------------------------------*/
+
+/* Estilo para o mapa do Google na seção de contato */
+.google-map {
+  border-radius: var(--border-radius-medium); /* Arredonda os cantos */
+  filter: hue-rotate(45deg); /* Aplica um filtro de tonalidade ao mapa */
+}
+
+/* Estilo geral do bloco de contato */
+.contact-block-wrap {
+  background: var(--primary-color); /* Fundo com a cor principal */
+  border-radius: var(--border-radius-medium); /* Arredonda os cantos */
+  padding: 0; /* Remove o espaçamento interno */
+  min-height: 200px; /* Altura mínima do bloco */
+}
+
+/* Estilo para o bloco de informações dentro do contato */
+.contact-block {
+  background: var(--secondary-color); /* Fundo com a cor secundária */
+  border-radius: var(--border-radius-medium); /* Arredonda os cantos */
+  transform: rotate(8deg); /* Inclina o bloco em 8 graus */
+  height: 100%; /* Ocupa 100% da altura disponível */
+  padding: 20px 40px; /* Espaçamento interno */
+}
+
+/* Corrige a rotação do título dentro do bloco */
+.contact-block h6 {
+  transform: rotate(-8deg); /* Inclina o título na direção oposta */
+}
+
+/* Estilo para os ícones personalizados dentro do bloco de contato */
+.contact-block .custom-icon {
+  background: var(--primary-color); /* Fundo com a cor principal */
+  border-radius: var(--border-radius-large); /* Arredonda os cantos */
+  display: block; /* Faz o ícone ocupar uma linha inteira */
+  width: 50px; /* Largura fixa */
+  height: 50px; /* Altura fixa */
+  line-height: 50px; /* Alinha o texto verticalmente */
+  text-align: center; /* Centraliza o texto no ícone */
+  position: relative;
+}
+
+/* Estilo para o texto destacado dentro do bloco de contato */
+.contact-block strong {
+  display: block; /* Faz o texto ocupar uma linha inteira */
+  color: var(--white-color); /* Cor do texto branca */
+  text-transform: uppercase; /* Converte o texto para letras maiúsculas */
+  margin-top: 20px; /* Espaçamento acima */
+  margin-bottom: 10px; /* Espaçamento abaixo */
+}
+
+/*---------------------------------------
+  CUSTOM FORM             
+-----------------------------------------*/
+
+/* Estilo geral dos campos de formulário */
+.custom-form .form-control {
+  color: var(--p-color); /* Define a cor do texto */
+  margin-bottom: 24px; /* Espaçamento inferior entre os campos */
+  padding-top: 13px; /* Espaçamento interno superior */
+  padding-bottom: 13px; /* Espaçamento interno inferior */
+  outline: none; /* Remove o contorno padrão ao focar */
+  transition: all 0.3s; /* Suaviza as alterações visuais */
+}
+
+/*---------------------------------------
+  CUSTOM FORM - INTERAÇÃO            
+-----------------------------------------*/
+
+/* Estilo para campos de formulário ao passar o mouse ou focar */
+.custom-form .form-control:hover,
+.custom-form .form-control:focus {
+  background: var(--section-bg-color); /* Altera a cor de fundo ao interagir */
+  border-color: transparent; /* Remove a cor da borda */
+}
+
+/* Estilo para o botão de envio no formulário personalizado */
+.custom-form button[type="submit"] {
+  background: var(--custom-btn-bg-color); /* Define a cor de fundo do botão */
+  border: none; /* Remove qualquer borda */
+  border-radius: var(--border-radius-large); /* Arredonda os cantos */
+  color: var(--white-color); /* Cor do texto branca */
+  font-size: var(--p-font-size); /* Tamanho da fonte */
+  font-weight: var(--font-weight-medium); /* Peso da fonte */
+  transition: all 0.3s; /* Suaviza as transições */
+  margin-bottom: 0; /* Remove o espaçamento inferior */
+}
+
+/* Estilo ao passar o mouse ou focar no botão de envio */
+.custom-form button[type="submit"]:hover,
+.custom-form button[type="submit"]:focus {
+  background: var(--custom-btn-bg-hover-color); /* Altera a cor de fundo ao interagir */
+  border-color: transparent; /* Remove a cor da borda */
+}
+
+/*---------------------------------------
+  SITE FOOTER - RODAPÉ             
+-----------------------------------------*/
+
+/* Estilo geral do rodapé do site */
+.site-footer {
+  position: relative; /* Define posição relativa para sobreposições */
+  padding: 80px 50px; /* Define espaçamentos interno superior e lateral */
+  padding-top: 0; /* Remove o espaçamento superior */
+}
+
+/* Barra decorativa no final do rodapé */
+.site-footer::after {
+  content: ""; /* Insere um elemento vazio para a barra decorativa */
+  background: linear-gradient(90deg, #9e998f 0%,  #7371d1 100%); /* Gradiente linear */
+  position: absolute; /* Posiciona a barra decorativa */
+  right: 0; /* Alinha à direita */
+  bottom: 0; /* Alinha na parte inferior */
+  left: 0; /* Alinha à esquerda */
+  width: 100%; /* Preenche a largura total */
+  height: 10px; /* Altura da barra */
+}
+
+/* Estilo para os links no rodapé */
+.site-footer-links {
+  padding-left: 0; /* Remove o espaçamento à esquerda */
+}
+
+/* Estilo para cada item de link no rodapé */
+.site-footer-link-item {
+  list-style: none; /* Remove o marcador da lista */
+  display: inline-block; /* Exibe os itens em linha */
+  margin-right: 15px; /* Espaçamento entre os itens */
+}
+
+/* Estilo para texto em destaque no rodapé */
+.site-footer strong {
+  display: block; /* Ocupa uma linha inteira */
+  color: var(--secondary-color); /* Define a cor do texto */
+}
+
+/* Estilo para o texto de direitos autorais no rodapé */
+.copyright-text {
+  font-size: var(--copyright-font-size); /* Define o tamanho da fonte */
+}
+
+/*---------------------------------------
+  SOCIAL ICONS - ÍCONES SOCIAIS             
+-----------------------------------------*/
+
+/* Remove margens e espaçamentos dos ícones sociais */
+.social-icon {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo para cada item de ícone social */
+.social-icon-item {
+  list-style: none; /* Remove o marcador da lista */
+  display: inline-block; /* Exibe os itens em linha */
+  vertical-align: top; /* Alinha os itens ao topo verticalmente */
+}
+
+/* Estilo para os links dos ícones sociais */
+.social-icon-link {
+  background: var(--secondary-color); /* Fundo com cor secundária */
+  border-radius: var(--border-radius-large); /* Arredonda os cantos */
+  color: var(--white-color); /* Cor do texto branca */
+  font-size: var(--copyright-font-size); /* Tamanho da fonte */
+  display: block; /* Ocupa uma linha inteira */
+  margin: 0 3px; /* Define espaçamento horizontal */
+  text-align: center; /* Centraliza o texto */
+  width: 35px; /* Largura do link */
+  height: 35px; /* Altura do link */
+  line-height: 36px; /* Alinha o texto verticalmente */
+  transition: background 0.2s, color 0.2s; /* Suaviza as transições */
+}
+
+/* Altera o fundo e a cor ao interagir com o ícone social */
+.social-icon-link:hover {
+  background: var(--primary-color); /* Fundo com a cor principal */
+  color: var(--white-color); /* Cor do texto branca */
+}
+
+/* Estilo para o conteúdo dentro do ícone social */
+.social-icon-link span {
+  display: block; /* Ocupa uma linha inteira */
+}
+
+/*---------------------------------------
+  RESPONSIVE STYLES - ESTILOS RESPONSIVOS              
+-----------------------------------------*/
+
+/* Estilos para telas com largura máxima de 1200px */
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 62px; /* Reduz o tamanho do título H1 */
+  }
+}
+
+/* Estilos para telas com largura máxima de 991px */
+@media screen and (max-width: 991px) {
+  h1 {
+    font-size: 54px; /* Reduz o tamanho do título H1 */
+  }
+
+  h2 {
+    font-size: 36px; /* Reduz o tamanho do título H2 */
+  }
+
+  h3 {
+    font-size: 32px; /* Reduz o tamanho do título H3 */
+  }
+
+  h4 {
+    font-size: 28px; /* Reduz o tamanho do título H4 */
+  }
+
+  h5 {
+    font-size: 20px; /* Reduz o tamanho do título H5 */
+  }
+
+  h6 {
+    font-size: 18px; /* Reduz o tamanho do título H6 */
+  }
+
+  .section-padding,
+  .hero-section {
+    padding: 50px 25px; /* Reduz os espaçamentos das seções */
+  }
+
+  .custom-block {
+    display: none; /* Esconde o bloco personalizado */
+  }
+  
+  .navbar {
+    background-color: var(--dark-color); /* Altera a cor de fundo da barra de navegação */
+  }
+
+  .navbar-expand-lg .navbar-nav {
+    padding-bottom: 30px; /* Espaçamento inferior para navegação */
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0; /* Remove o espaçamento interno dos links */
+  }
+
+  .booking-form {
+    padding: 45px; /* Reduz o espaçamento interno do formulário */
+  }
+}
+
+/* Estilos para telas com largura máxima de 767px */
+@media screen and (max-width: 767px) {
+  .custom-btn {
+    font-size: 14px; /* Reduz o tamanho do botão */
+    padding: 10px 20px; /* Ajusta o espaçamento interno */
+  }
+}
+
+/* Estilos para telas com largura máxima de 480px */
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 38px; /* Reduz o tamanho do título H1 */
+  }
+
+  h2 {
+    font-size: 28px; /* Reduz o tamanho do título H2 */
+  }
+
+  h3 {
+    font-size: 26px; /* Reduz o tamanho do título H3 */
+  }
+
+  h4 {
+    font-size: 22px; /* Reduz o tamanho do título H4 */
+  }
+
+  h5 {
+    font-size: 20px; /* Reduz o tamanho do título H5 */
+  }
+
+  .services-info h4 {
+    font-size: 20px; /* Ajusta o tamanho do título dentro das informações de serviços */
+  }
+
+  .booking-form {
+    padding: 35px; /* Reduz o espaçamento interno do formulário */
+  }
+}
+
+

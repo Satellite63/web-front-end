@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <!-- Define o documento como HTML5 e especifica o idioma como inglês -->
+        <meta charset="utf-8">
+        <!-- Configura a visualização responsiva para dispositivos móveis -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Meta descrição para motores de busca -->
+        <meta name="description" content="">
+        <!-- Define o autor do site -->
+        <meta name="author" content="">
+
+        <!-- Título do site exibido na aba do navegador -->
+        <title>MECANICA DO PEXUXO</title>
+
+        <!-- Pré-carrega as conexões para fontes externas para melhorar o desempenho -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Importa a fonte "Unbounded" do Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500&display=swap" rel="stylesheet">
+
+        <!-- Link para os arquivos CSS necessários -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link href="css/template-shop.css" rel="stylesheet">
+
+    </head>
+    
+    <body>
+
+        <!-- Container principal fluido que ocupa toda a largura da página -->
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- Botão para alternar o menu lateral em dispositivos menores -->
+                <button class="navbar-toggler d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menu lateral de navegação -->
+                <nav id="sidebarMenu" class="col-md-4 col-lg-3 d-md-block sidebar collapse p-0">
+
+                    <!-- Conteúdo fixo centralizado no menu lateral -->
+                    <div class="position-sticky sidebar-sticky d-flex flex-column justify-content-center align-items-center">
+                        <!-- Logotipo da marca -->
+                        <a class="navbar-brand" href="index.html">
+                            <img src="images/pexuxologo.png" class="logo-image img-fluid" align="">
+                        </a>
+
+                        <!-- Lista de navegação com links para as seções -->
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_1">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_2">Quem Somos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_3">Serviços</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_4">Lista de Preço</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_5">Contato</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                
+                <!-- Área principal do conteúdo -->
+                <div class="col-md-8 ms-sm-auto col-lg-9 p-0">
+                    <!-- Seção do cabeçalho principal (Hero Section) -->
+                    <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+
+                        <!-- Container da seção -->
+                        <div class="container">
+                            <div class="row">
+
+                                <!-- Coluna com texto e botões -->
+                                <div class="col-lg-8 col-12">
+                                    <h1 class="text-white mb-lg-3 mb-4"><strong>Pexuxo <em>AutoCenter</em></strong></h1>
+                                    <p class="text-black">Sua lasanha, nossa alegria!</p>
+                                    <br>
+                                    <a class="btn custom-btn custom-border-btn custom-btn-bg-white smoothscroll me-2 mb-2" href="#section_2">Sobre Nós</a>
+                                    <a class="btn custom-btn smoothscroll mb-2" href="#section_3">Nossos Serviços</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bloco customizado com imagem e botão -->
+                        <div class="custom-block d-lg-flex flex-column justify-content-center align-items-center">
+                            <img src="images/reparandoveiculo.jpg" class="custom-block-image img-fluid" alt="">
+                            <h4><strong class="text-white">Não deixe a manutenção para amanhã.</strong></h4>
+                            <a href="#booking-section" class="smoothscroll btn custom-btn custom-btn-italic mt-3">Marque sua visita</a>
+                        </div>
+                    </section>
+
+                    <!-- Seção "About" -->
+                    <section class="about-section section-padding" id="section_2">
+                        <div class="container">
+                            <div class="row">
+
+                                <!-- Título e descrição da seção -->
+                                <div class="col-lg-12 col-12 mx-auto">
+                                    <h2 class="mb-4">Melhores Mecanicos</h2>
+                                    <div class="border-bottom pb-3 mb-5">
+                                        <p>Pexuxo Auto Center <a href="" target="_blank"></a> sua oficina especializada nas maiores montadoras do Brasil. Trabalhamos com Chevrolet, Fiat, Volkswagen, Renalt, Citroen, Toyota, Nissan, Peougeot, Jeep.</p>
+                                    </div>
+                                </div>
+
+                                <!-- informações sobre os profissionais -->
+                                <h6 class="mb-5">Nossos mecanicos</h6>
+
+                                <!-- Primeiro mecanico -->
+                                <div class="col-lg-5 col-12 custom-block-bg-overlay-wrap me-lg-5 mb-5 mb-lg-0">
+                                    <img src="images/mecanico/bobhonesto.jpg" class="custom-block-bg-overlay-image img-fluid" alt="">
+                                    <div class="team-info d-flex align-items-center flex-wrap">
+                                        <p class="mb-0">Bob Honesto</p>
+                                        <ul class="social-icon ms-auto">
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-facebook"></a>
+                                            </li>
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-instagram"></a>
+                                            </li>
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-whatsapp"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Segundo mecanico -->
+                                <div class="col-lg-5 col-12 custom-block-bg-overlay-wrap mt-4 mt-lg-0 mb-5 mb-lg-0">
+                                    <img src="images/mecanico/tiaoarruela.jpg" class="custom-block-bg-overlay-image img-fluid" alt="">
+                                    <div class="team-info d-flex align-items-center flex-wrap">
+                                        <p class="mb-0">Tiao Biela</p>
+                                        <ul class="social-icon ms-auto">
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-facebook"></a>
+                                            </li>
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-instagram"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Início da seção de destaque com desconto -->
+<section class="featured-section section-padding">
+    <!-- Sobreposição de seção para adicionar um efeito visual -->
+    <div class="section-overlay"></div>
+
+    <!-- Container principal para organizar o conteúdo -->
+    <div class="container">
+        <!-- Linha para organizar o layout da seção -->
+        <div class="row">
+            <!-- Coluna centralizada que contém o conteúdo -->
+            <div class="col-lg-10 col-12 mx-auto">
+                <!-- Título da seção -->
+                <h2 class="mb-3">5% de Desconto</h2>
+                <!-- Descrição do desconto -->
+                <p>Para pagamentos feito em Dinheiro ou PIX</p>
+                <!-- Código promocional destacado -->
+                <strong>Promo Code: Pexu2024</strong>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Início da seção de serviços -->
+<section class="services-section section-padding" id="section_3">
+    <!-- Container principal para os serviços -->
+    <div class="container">
+        <!-- Linha para organizar os itens dos serviços -->
+        <div class="row">
+            <!-- Título da seção de serviços -->
+            <div class="col-lg-12 col-12">
+                <h2 class="mb-5">Serviços</h2>
+            </div>
+
+            <!-- Serviço 1:  -->
+            <div class="col-lg-6 col-12 mb-4">
+                <!-- Bloco do serviço -->
+                <div class="services-thumb">
+                    <!-- Imagem representando o serviço -->
+                    <img src="images/services/revisao.jpeg" class="services-image img-fluid" alt="">
+                    <!-- Informações sobre o serviço -->
+                    <div class="services-info d-flex align-items-end">
+                        <!-- Nome do serviço -->
+                        <h4 class="mb-0">Revisão</h4>
+                        <!-- Preço do serviço -->
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serviço 2:  -->
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="services-thumb">
+                    <img src="images/services/laudocautelar.jpg" class="services-image img-fluid" alt="">
+                    <div class="services-info d-flex align-items-end">
+                        <h4 class="mb-0">Laudo Cautelar</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serviço 3:  -->
+            <div class="col-lg-6 col-12 mb-4 mb-lg-0">
+                <div class="services-thumb">
+                    <img src="images/services/eletronic.jpg" class="services-image img-fluid" alt="">
+                    <div class="services-info d-flex align-items-end">
+                        <h4 class="mb-0">Auto Eletrica</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serviço 4:  -->
+            <div class="col-lg-6 col-12">
+                <div class="services-thumb">
+                    <img src="images/services/mecanicageral.jpg" class="services-image img-fluid" alt="">
+                    <div class="services-info d-flex align-items-end">
+                        <h4 class="mb-0">Mecanica Geral</h4>
+                  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Início da seção de agendamento -->
+<section class="booking-section section-padding" id="booking-section">
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Linha para organizar o formulário -->
+        <div class="row">
+            <div class="col-lg-10 col-12 mx-auto">
+                <!-- Formulário de agendamento -->
+                <form action="#" method="post" class="custom-form booking-form" id="bb-booking-form" role="form">
+                    <!-- Título e descrição do formulário -->
+                    <div class="text-center mb-5">
+                        <h2 class="mb-1">Reserve um Horario</h2>
+                        <p>Por favor preencha o formulario, logo entraremos em contato!</p>
+                    </div>
+
+                    <!-- Corpo do formulário -->
+                    <div class="booking-form-body">
+                        <div class="row">
+                            <!-- Campo para nome completo -->
+                            <div class="col-lg-6 col-12">
+                                <input type="text" name="bb-name" id="bb-name" class="form-control" placeholder="Nome Completo" required>
+                            </div>
+
+                            <!-- Campo para número de telefone -->
+                            <div class="col-lg-6 col-12">
+                                <input type="tel" class="form-control" name="bb-phone" placeholder="Tel (65) 99243-0023" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="">
+                            </div>
+
+                            <!-- Campo para horário -->
+                            <div class="col-lg-6 col-12">
+                                <input class="form-control" type="time" name="bb-time" value="18:30" />
+                            </div>
+
+                            <!-- Seleção de filial -->
+                            <div class="col-lg-6 col-12">
+                                <select class="form-select form-control" name="bb-branch" id="bb-branch" aria-label="Default select example">
+                                    <option selected="">Selecione a Filial</option>
+                                    <option value="Grünberger">Cuiabá - MT</option>
+                                    <option value="Behrenstraße">Varzea Grande - MT</option>
+                                </select>
+                            </div>
+
+                            <!-- Campo para data -->
+                            <div class="col-lg-6 col-12">
+                                <input type="date" name="bb-date" id="bb-date" class="form-control" placeholder="Date" required>
+                            </div>
+
+                            <!-- Campo para número de pessoas -->
+                            <div class="col-lg-6 col-12">
+                                <input type="number" name="bb-number" id="bb-number" class="form-control" placeholder="Quantidade de Veiculos" required>
+                            </div>
+                        </div>
+
+                        <!-- Campo para mensagem adicional -->
+                        <textarea name="bb-message" rows="3" class="form-control" id="bb-message" placeholder="Comentario (Opcional)"></textarea>
+
+                        <!-- Botão de envio -->
+                        <div class="col-lg-4 col-md-10 col-8 mx-auto">
+                            <button type="submit" class="form-control">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Seção com a lista de preços -->
+<section class="price-list-section section-padding" id="section_4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-12">
+                <div class="price-list-thumb-wrap">
+                    <div class="mb-4">
+                        <!-- Título da lista de preços -->
+                        <h2 class="mb-2">Lista de Preço</h2>
+                        <!-- Informação do preço inicial -->
+                        <strong>Somente mão de Obra</strong>
+                    </div>
+                    <div class="price-list-thumb">
+                        <!-- Bloco que contém os detalhes de um serviço e seu preço -->
+                        <h6 class="d-flex">
+                            <!-- Cabeçalho do serviço com alinhamento flexível -->
+                            Laudo Cautelar
+                            <span class="price-list-thumb-divider"></span>
+                            <!-- Separador visual entre o nome do serviço e o preço -->
+                            <strong>R$400.00</strong>
+                            <!-- Preço do serviço destacado -->
+                        </h6>
+                    </div>
+                    
+                    <div class="price-list-thumb">
+                        <!-- Bloco que contém os detalhes de um serviço -->
+                        <h6 class="d-flex">
+                            Vistoria pós-compra
+                            <!-- Nome do serviço -->
+                            <span class="price-list-thumb-divider"></span>
+                            <strong>R$150.00</strong>
+                            <!-- Preço do serviço -->
+                        </h6>
+                    </div>
+                    
+                    <div class="price-list-thumb">
+                        <!-- Bloco que contém os detalhes de um serviço -->
+                        <h6 class="d-flex">
+                            Pacote Revisão(oleo e filtros)
+                            <!-- Nome do serviço -->
+                            <span class="price-list-thumb-divider"></span>
+                            <strong>R$200.00</strong>
+                            <!-- Preço do serviço -->
+                        </h6>
+                    </div>
+                    
+                    <div class="price-list-thumb">
+                        <!-- Bloco que contém os detalhes de um serviço -->
+                        <h6 class="d-flex">
+                            Limpeza Arrefecimento
+                            <!-- Nome do serviço -->
+                            <span class="price-list-thumb-divider"></span>
+                            <strong>R$ 200.00</strong>
+                            <!-- Preço do serviço -->
+                        </h6>
+                    </div>
+                    
+                    <div class="col-lg-4 col-12 custom-block-bg-overlay-wrap mt-5 mb-5 mb-lg-0 mt-lg-0 pt-3 pt-lg-0">
+                        <!-- Bloco que contém a imagem do salão -->
+                        <img src="images/oleo.jpg" class="custom-block-bg-overlay-image img-fluid" alt="">
+                        <!-- Imagem do ambiente, responsiva e com estilo de fundo personalizado -->
+                    </div>
+                    
+                    <section class="contact-section" id="section_5">
+                        <!-- Início da seção de contato, identificada pelo ID -->
+                        <div class="section-padding section-bg">
+                            <!-- Bloco com padding e estilo de fundo -->
+                            <div class="container">
+                                <!-- Container centralizado -->
+                                <div class="row">
+                                    <div class="col-lg-8 col-12 mx-auto">
+                                        <!-- Título da seção de contato -->
+                                        <h2 class="text-center">Entre em Contato!</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="section-padding">
+                            <!-- Bloco de informações adicionais -->
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-6 col-12">
+                                        <!-- Informações de contato -->
+                                        <h5 class="mb-3"><strong>Informação</strong> Contato</h5>
+                                        <p class="text-white d-flex mb-1">
+                                            <!-- Telefone clicável -->
+                                            <a href="65 99243-0023" class="site-footer-link">
+                                                (65) 99243-0023
+                                            </a>
+                                        </p>
+                                        <p class="text-white d-flex">
+                                            <!-- Email clicável -->
+                                            <a href="arthurmolusco11@gmail.com" class="site-footer-link">
+                                                pexuxo@oficina.com.br
+                                            </a>
+                                        </p>
+                    
+                                        <ul class="social-icon">
+                                            <!-- Lista de links para redes sociais -->
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-facebook"></a>
+                                            </li>
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-twitter"></a>
+                                            </li>
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-instagram"></a>
+                                            </li>
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-youtube"></a>
+                                            </li>
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-whatsapp"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                    
+                                    <div class="col-lg-5 col-12 contact-block-wrap mt-5 mt-lg-0 pt-4 pt-lg-0 mx-auto">
+                                        <!-- Bloco com horário de funcionamento -->
+                                        <div class="contact-block">
+                                            <h6 class="mb-0">
+                                                <i class="custom-icon bi-shop me-3"></i>
+                                                <strong>Aberto Seg-Sex</strong>
+                                                <!-- Título de funcionamento -->
+                                                <span class="ms-auto">07:30-17:30</span>
+                                                <!-- Horário -->
+                                            </h6>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="col-lg-12 col-12 mx-auto mt-5 pt-5">
+                                        <!-- Mapa embutido do Google Maps -->
+                                        <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3843.7413856922567!2d-56.0542291!3d-15.5519885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x939db1492593bc2b%3A0xf92aedb07a1d807c!2sBaiano%20Auto%20Center!5e0!3m2!1spt-PT!2sbr!4v1735605483459!5m2!1spt-PT!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+
+<footer class="site-footer">
+    <!-- Início do rodapé do site -->
+    <div class="container">
+        <!-- Container para centralizar os elementos -->
+        <div class="row">
+            <!-- Linha que contém o conteúdo do rodapé -->
+
+            <div class="col-lg-12 col-12">
+                <!-- Coluna que ocupa toda a largura para o título -->
+                <h4 class="site-footer-title mb-4">Outras filiais</h4>
+                <!-- Título do rodapé com espaçamento inferior -->
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-11">
+                <!-- Coluna para uma das filiais, com layout responsivo -->
+                <div class="site-footer-thumb">
+                    <!-- Bloco de informações sobre a filial -->
+                    <strong class="mb-1">Rota Peças</strong>
+                    <!-- Nome da filial -->
+                    <p> Av. Prof. Alice Freire, CPA, Cuiaba-MT</p>
+                    <!-- Endereço da filial -->
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-11">
+                <!-- Segunda coluna com informações de outra filial -->
+                <div class="site-footer-thumb">
+                    <strong class="mb-1">Castrilon</strong>
+                    <p>BBenjamin Pedroso da Silva, 26 - Cpa II, Cuiabá - MT</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="site-footer-bottom">
+        <!-- Seção inferior do rodapé -->
+        <div class="container">
+            <!-- Container para centralizar os elementos -->
+            <div class="row align-items-center">
+                <!-- Linha com alinhamento centralizado -->
+
+                <div class="col-lg-8 col-12 mt-4">
+                    <!-- Coluna com o texto de copyright -->
+                    <p class="copyright-text mb-0">
+                        <!-- Texto com os direitos autorais -->
+                        Copyright © 2024 VF SISTEM
+                        - Design: Arthur Vicente
+                    </p>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-3 mt-lg-4 ms-auto">
+                    <!-- Coluna com ícone de voltar ao topo -->
+                    <a href="#section_1" class="back-top-icon smoothscroll" title="Back Top">
+                        <!-- Link para rolar suavemente até o topo da página -->
+                        <i class="bi-arrow-up-circle"></i>
+                        <!-- Ícone de seta para cima -->
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+<!-- Fim do container principal -->
+
+<!-- Arquivos JavaScript -->
+<script src="js/jquery.min.js"></script>
+<!-- Biblioteca jQuery -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Biblioteca Bootstrap para funcionalidades adicionais -->
+<script src="js/click-scroll.js"></script>
+<!-- Script para rolagem suave -->
+<script src="js/custom.js"></script>
+<!-- Script customizado -->
+</body>
+</html>
+<!-- Fim do documento HTML -->
